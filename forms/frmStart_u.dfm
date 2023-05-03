@@ -73,10 +73,21 @@ object frmStart: TfrmStart
     Margins.Right = 4
     Margins.Bottom = 4
     TabOrder = 2
+    object lblLight: TLabel
+      Left = 119
+      Top = 52
+      Width = 118
+      Height = 31
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Caption = 'Light Mode'
+    end
     object btnLogin: TButton
       Left = 20
       Top = 150
-      Width = 131
+      Width = 211
       Height = 61
       Cursor = crHandPoint
       Margins.Left = 4
@@ -90,28 +101,6 @@ object frmStart: TfrmStart
       ImageMargins.Right = 10
       Images = vilIcons
       TabOrder = 0
-    end
-    object btnOptions: TButton
-      Left = 169
-      Top = 150
-      Width = 63
-      Height = 61
-      Cursor = crHandPoint
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -43
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ImageAlignment = iaCenter
-      ImageIndex = 1
-      ImageName = 'settings'
-      Images = vilIcons
-      ParentFont = False
-      TabOrder = 1
     end
     object btnClose: TButton
       Left = 20
@@ -128,7 +117,25 @@ object frmStart: TfrmStart
       ImageName = 'close'
       ImageMargins.Left = 10
       Images = vilIcons
+      TabOrder = 1
+    end
+    object tsLight: TToggleSwitch
+      Left = 40
+      Top = 50
+      Width = 63
+      Height = 25
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      ParentShowHint = False
+      ShowHint = False
+      ShowStateCaption = False
+      SwitchHeight = 25
+      SwitchWidth = 63
       TabOrder = 2
+      ThumbWidth = 19
+      OnClick = tsLightClick
     end
   end
   object vilIcons: TVirtualImageList
