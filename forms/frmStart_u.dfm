@@ -103,6 +103,7 @@ object Form1: TForm1
       Top = 219
       Width = 211
       Height = 51
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -110,5 +111,10 @@ object Form1: TForm1
       Caption = 'Close'
       TabOrder = 2
     end
+  end
+  object vilIcons: TVirtualImageList
+    Images = <>
+    Left = 400
+    Top = 76
   end
 end
