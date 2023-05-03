@@ -10,6 +10,7 @@ object frmStart: TfrmStart
   Font.Height = -23
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 31
   object pnlLeader: TPanel

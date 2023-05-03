@@ -5,7 +5,8 @@ uses
   frmStart_u in 'forms\frmStart_u.pas' {frmStart},
   frmLogin_u in 'forms\frmLogin_u.pas' {Form2},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  clsChecker_u in 'Classes\clsChecker_u.pas';
 
 {$R *.res}
 

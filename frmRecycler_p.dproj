@@ -109,6 +109,7 @@
             <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Classes\clsChecker_u.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

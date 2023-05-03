@@ -8,7 +8,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls,
   Vcl.ComCtrls, System.ImageList, Vcl.ImgList, Vcl.VirtualImageList,
   Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.WinXCtrls,
-  Vcl.Themes, Vcl.Styles, system.JSON;
+  Vcl.Themes, Vcl.Styles, System.JSON, clsChecker_u;
 
 type
   TfrmStart = class(TForm)
@@ -24,8 +24,9 @@ type
     tsLight: TToggleSwitch;
     lblLight: TLabel;
     procedure tsLightClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
-    procedure StartupCheck;
+
   public
     { Public declarations }
   end;
@@ -37,10 +38,13 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmStart.StartupCheck;
+procedure TfrmStart.FormCreate(Sender: TObject);
+var
+  Checker: TChecker;
 begin
-
+  Checker.Check(); //run the checks
 end;
+
 
 procedure TfrmStart.tsLightClick(Sender: TObject);
 begin
