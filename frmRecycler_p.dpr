@@ -2,7 +2,7 @@ program frmRecycler_p;
 
 uses
   Vcl.Forms,
-  frmStart_u in 'forms\frmStart_u.pas' {Form1},
+  frmStart_u in 'forms\frmStart_u.pas' {frmStart},
   frmLogin_u in 'forms\frmLogin_u.pas' {Form2};
 
 {$R *.res}
@@ -10,7 +10,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmStart, frmStart);
   Application.CreateForm(TForm2, Form2);
   Application.Run;
 end.
