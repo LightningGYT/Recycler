@@ -110,6 +110,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Classes\clsChecker_u.pas"/>
+        <DCCReference Include="data modules\dmRecycle_u.pas">
+            <Form>DataModule1</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
