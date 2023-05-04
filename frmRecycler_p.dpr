@@ -3,7 +3,7 @@ program frmRecycler_p;
 uses
   Vcl.Forms,
   frmStart_u in 'forms\frmStart_u.pas' {frmStart},
-  frmLogin_u in 'forms\frmLogin_u.pas' {Form2},
+  frmLogin_u in 'forms\frmLogin_u.pas' {frmLogin},
   Vcl.Themes,
   Vcl.Styles,
   clsChecker_u in 'Classes\clsChecker_u.pas',
@@ -16,7 +16,7 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Windows10 Dark');
   Application.CreateForm(TfrmStart, frmStart);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

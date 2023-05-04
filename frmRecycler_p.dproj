@@ -106,7 +106,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="forms\frmLogin_u.pas">
-            <Form>Form2</Form>
+            <Form>frmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Classes\clsChecker_u.pas"/>
