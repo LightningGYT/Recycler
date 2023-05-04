@@ -74,37 +74,28 @@ object frmStart: TfrmStart
     Margins.Right = 4
     Margins.Bottom = 4
     TabOrder = 2
-    object btnLogin: TButton
+    object bbnLogin: TBitBtn
       Left = 20
       Top = 150
       Width = 211
       Height = 61
-      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Login'
-      ImageAlignment = iaRight
-      ImageIndex = 2
-      ImageName = 'sign-in'
-      ImageMargins.Right = 10
       TabOrder = 0
     end
-    object btnClose: TButton
+    object bbnClose: TBitBtn
       Left = 20
       Top = 219
       Width = 211
       Height = 62
-      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
       Caption = 'Close'
-      ImageIndex = 0
-      ImageName = 'close'
-      ImageMargins.Left = 10
       TabOrder = 1
     end
   end

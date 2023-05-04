@@ -17,8 +17,8 @@ type
     pnlControl: TPanel;
     redLeader: TRichEdit;
     lblWelcome: TLabel;
-    btnLogin: TButton;
-    btnClose: TButton;
+    bbnLogin: TBitBtn;
+    bbnClose: TBitBtn;
     procedure FormCreate(Sender: TObject);
   private
 
