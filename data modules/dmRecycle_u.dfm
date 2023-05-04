@@ -1,4 +1,4 @@
-object DataModule1: TDataModule1
+object dmRecycle: TdmRecycle
   OnCreate = DataModuleCreate
   Height = 750
   Width = 1000

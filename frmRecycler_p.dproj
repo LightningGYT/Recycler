@@ -110,7 +110,7 @@
         </DCCReference>
         <DCCReference Include="Classes\clsChecker_u.pas"/>
         <DCCReference Include="data modules\dmRecycle_u.pas">
-            <Form>DataModule1</Form>
+            <Form>dmRecycle</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
@@ -118,6 +118,7 @@
             <Form>frmStudent</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Classes\clsLogerIner_u.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
