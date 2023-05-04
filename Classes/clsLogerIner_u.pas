@@ -40,6 +40,7 @@ begin
     Active := False;
     SQL.Clear;
 
+    // Uses Parameters as an atempt to stop SQL injection
     SQL.Text := 'SELECT * FROM Login WHERE Username =:Name';
     Parameters.ParamByName('Name').Value := fInUsername;
     ExecSQL;
@@ -53,6 +54,7 @@ begin
         fSalt := FieldByName('Salt').AsString;
       end;
     except
+      // if user is not found
       raise Exception.Create('User not found');
     end;
 
