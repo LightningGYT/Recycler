@@ -24,6 +24,23 @@ object frmStudent: TfrmStudent
     Margins.Bottom = 4
     Align = alLeft
     TabOrder = 0
+    object redLeader: TRichEdit
+      Left = 20
+      Top = 20
+      Width = 441
+      Height = 511
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+    end
   end
   object pnlInfo: TPanel
     Left = 480
@@ -46,5 +63,30 @@ object frmStudent: TfrmStudent
     Margins.Right = 4
     Margins.Bottom = 4
     TabOrder = 2
+    object bbnLogout: TBitBtn
+      Left = 20
+      Top = 70
+      Width = 134
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Caption = 'Logout'
+      TabOrder = 0
+    end
+    object bbnClose: TBitBtn
+      Left = 170
+      Top = 70
+      Width = 124
+      Height = 61
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Kind = bkClose
+      NumGlyphs = 2
+      TabOrder = 1
+    end
   end
 end

@@ -4,13 +4,17 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ComCtrls,
+  Vcl.Buttons;
 
 type
   TfrmStudent = class(TForm)
     pnlLeader: TPanel;
     pnlInfo: TPanel;
     pnlControl: TPanel;
+    redLeader: TRichEdit;
+    bbnLogout: TBitBtn;
+    bbnClose: TBitBtn;
   private
     { Private declarations }
   public
