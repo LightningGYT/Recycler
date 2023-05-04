@@ -17,9 +17,11 @@ type
 
     fInUsername: String;
     fInPassword: String;
+    fHasher:THasher;
     function FindUser: boolean;
   public
     constructor Create(sUsername, sPassword: String);
+    function Login:String;
   end;
 
 implementation
@@ -30,7 +32,7 @@ constructor TLoginer.Create(sUsername, sPassword: String);
 begin
   fInUsername := sUsername;
   fInPassword := sPassword;
-  FindUser;
+  fHasher := THasher.Create;
 end;
 
 function TLoginer.FindUser: boolean;
@@ -59,6 +61,23 @@ begin
     end;
 
   end;
+end;
+
+function TLoginer.Login: String;
+var
+  sHashedPassword :String;
+begin
+  sHashedPassword := fHasher.Hash(fInPassword, fDetails.fSalt);
+
+  if sHashedPassword = fDetails.fPassword then
+  begin
+
+  end
+  else
+  begin
+    raise Exception.Create('Details do not match');
+  end;
+
 end;
 
 end.

@@ -7,6 +7,7 @@ uses
 
 type
   THasher = class
+  public
     function Hash(sString, sSalt: String): String;
   end;
 
