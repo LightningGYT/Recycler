@@ -68,6 +68,7 @@ object frmStudent: TfrmStudent
       Top = 70
       Width = 134
       Height = 61
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -80,6 +81,7 @@ object frmStudent: TfrmStudent
       Top = 70
       Width = 124
       Height = 61
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4

@@ -28,6 +28,7 @@ object frmLogin: TfrmLogin
       Top = 20
       Width = 341
       Height = 35
+      Cursor = crIBeam
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -40,6 +41,7 @@ object frmLogin: TfrmLogin
       Top = 80
       Width = 341
       Height = 35
+      Cursor = crIBeam
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -52,6 +54,7 @@ object frmLogin: TfrmLogin
       Top = 180
       Width = 341
       Height = 61
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -64,6 +67,7 @@ object frmLogin: TfrmLogin
       Top = 249
       Width = 341
       Height = 62
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4

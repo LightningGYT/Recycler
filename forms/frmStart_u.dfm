@@ -80,6 +80,7 @@ object frmStart: TfrmStart
       Top = 150
       Width = 211
       Height = 61
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -93,6 +94,7 @@ object frmStart: TfrmStart
       Top = 219
       Width = 211
       Height = 62
+      Cursor = crHandPoint
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
