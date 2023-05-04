@@ -16,11 +16,11 @@ object DataModule1: TDataModule1
     Connection = conRecycle
     Parameters = <>
     Left = 296
-    Top = 120
+    Top = 104
   end
   object dsRecycle: TDataSource
     DataSet = qryRecycle
-    Left = 432
-    Top = 128
+    Left = 384
+    Top = 104
   end
 end
