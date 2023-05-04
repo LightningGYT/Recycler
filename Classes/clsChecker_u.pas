@@ -9,7 +9,6 @@ type
   TChecker = class
   private
     procedure Settings;
-    procedure Database;
   public
     procedure Check;
   end;
@@ -21,11 +20,6 @@ implementation
 procedure TChecker.Check;
 begin
   Settings;
-end;
-
-procedure TChecker.Database;
-begin
-//
 end;
 
 procedure TChecker.Settings;
