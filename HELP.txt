@@ -1,1 +1,0 @@
-https://docwiki.embarcadero.com/RADStudio/Alexandria/en/JSON_Objects_Framework -> Learning Json objects
