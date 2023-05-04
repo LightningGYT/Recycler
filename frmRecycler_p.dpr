@@ -7,7 +7,8 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   clsChecker_u in 'Classes\clsChecker_u.pas',
-  dmRecycle_u in 'data modules\dmRecycle_u.pas' {DataModule1: TDataModule};
+  dmRecycle_u in 'data modules\dmRecycle_u.pas' {DataModule1: TDataModule},
+  frmStudent_u in 'forms\frmStudent_u.pas' {frmStudent};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.CreateForm(TfrmStart, frmStart);
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TfrmStudent, frmStudent);
   Application.Run;
 end.
