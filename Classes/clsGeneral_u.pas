@@ -7,20 +7,19 @@ uses
 
 type
   THasher = class
-    function Hash(sString, sSalt :String):String;
+    function Hash(sString, sSalt: String): String;
   end;
 
 implementation
-
 
 { THasher }
 
 function THasher.Hash(sString, sSalt: String): String;
 var
-  sHashedString : String;
-  sBuiltString : String;
+  sHashedString: String;
+  sBuiltString: String;
 begin
-  sBuiltString := format('%s%s%s',[sSalt,sString,sSalt]);
+  sBuiltString := format('%s%s%s', [sSalt, sString, sSalt]);
 
   sHashedString := THashSHA2.GetHashString(sBuiltString);
 
