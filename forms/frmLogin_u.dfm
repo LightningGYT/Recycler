@@ -61,6 +61,7 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 4
       Caption = 'Login'
       TabOrder = 2
+      OnClick = bbnLoginClick
     end
     object bbnCancel: TBitBtn
       Left = 20
