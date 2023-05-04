@@ -85,6 +85,7 @@ object frmStart: TfrmStart
       Margins.Bottom = 4
       Caption = 'Login'
       TabOrder = 0
+      OnClick = bbnLoginClick
     end
     object bbnClose: TBitBtn
       Left = 20
@@ -95,7 +96,8 @@ object frmStart: TfrmStart
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'Close'
+      Kind = bkClose
+      NumGlyphs = 2
       TabOrder = 1
     end
   end

@@ -67,7 +67,8 @@ object frmLogin: TfrmLogin
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      Caption = 'Cancel'
+      Kind = bkCancel
+      NumGlyphs = 2
       TabOrder = 3
     end
   end

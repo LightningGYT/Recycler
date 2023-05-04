@@ -8,7 +8,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls,
   Vcl.ComCtrls, System.ImageList, Vcl.ImgList, Vcl.VirtualImageList,
   Vcl.BaseImageCollection, Vcl.ImageCollection, Vcl.WinXCtrls,
-  clsChecker_u;
+  clsChecker_u, frmLogin_u;
 
 type
   TfrmStart = class(TForm)
@@ -20,6 +20,7 @@ type
     bbnLogin: TBitBtn;
     bbnClose: TBitBtn;
     procedure FormCreate(Sender: TObject);
+    procedure bbnLoginClick(Sender: TObject);
   private
 
   public
@@ -33,11 +34,16 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmStart.bbnLoginClick(Sender: TObject);
+begin
+  frmLogin.ShowModal;
+end;
+
 procedure TfrmStart.FormCreate(Sender: TObject);
 var
   Checker: TChecker;
 begin
-  Checker.Check(); //run the checks
+  Checker.Check(); // run the checks
 end;
 
 end.
