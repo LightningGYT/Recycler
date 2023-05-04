@@ -1,6 +1,6 @@
 object frmStart: TfrmStart
-  Left = 0
-  Top = 0
+  Left = 549
+  Top = 213
   Caption = 'frmStart'
   ClientHeight = 554
   ClientWidth = 788
@@ -10,6 +10,7 @@ object frmStart: TfrmStart
   Font.Height = -23
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesigned
   OnCreate = FormCreate
   PixelsPerInch = 120
   TextHeight = 31

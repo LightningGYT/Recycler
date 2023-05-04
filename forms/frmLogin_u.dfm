@@ -1,6 +1,6 @@
 object frmLogin: TfrmLogin
-  Left = 0
-  Top = 0
+  Left = 726
+  Top = 180
   Caption = 'Recycle'
   ClientHeight = 554
   ClientWidth = 378
@@ -10,6 +10,7 @@ object frmLogin: TfrmLogin
   Font.Height = -23
   Font.Name = 'Consolas'
   Font.Style = []
+  Position = poDesigned
   PixelsPerInch = 120
   TextHeight = 27
   object pnlLogin: TPanel
