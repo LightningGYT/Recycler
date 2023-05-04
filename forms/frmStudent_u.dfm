@@ -39,6 +39,7 @@ object frmStudent: TfrmStudent
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
+      ReadOnly = True
       TabOrder = 0
     end
   end
