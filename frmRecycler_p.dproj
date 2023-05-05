@@ -120,6 +120,7 @@
         </DCCReference>
         <DCCReference Include="Classes\clsLogerIner_u.pas"/>
         <DCCReference Include="Classes\clsGeneral_u.pas"/>
+        <DCCReference Include="Classes\clsLoger_u.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

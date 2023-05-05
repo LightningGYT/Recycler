@@ -10,7 +10,8 @@ uses
   dmRecycle_u in 'data modules\dmRecycle_u.pas' {dmRecycle: TDataModule},
   frmStudent_u in 'forms\frmStudent_u.pas' {frmStudent},
   clsLogerIner_u in 'Classes\clsLogerIner_u.pas',
-  clsGeneral_u in 'Classes\clsGeneral_u.pas';
+  clsGeneral_u in 'Classes\clsGeneral_u.pas',
+  clsLoger_u in 'Classes\clsLoger_u.pas';
 
 {$R *.res}
 
