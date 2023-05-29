@@ -44,6 +44,7 @@ var
   Checker: TChecker;
 begin
   Checker.Check(); // run the checks
+
 end;
 
 end.

@@ -15,9 +15,9 @@ object frmLogin: TfrmLogin
   TextHeight = 27
   object pnlLogin: TPanel
     Left = 0
-    Top = 210
+    Top = 179
     Width = 375
-    Height = 335
+    Height = 366
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
@@ -39,6 +39,7 @@ object frmLogin: TfrmLogin
       AutoSize = False
       TabOrder = 0
       TextHint = 'Username'
+      OnChange = ValidEntry
     end
     object edtPassword: TEdit
       AlignWithMargins = True
@@ -54,16 +55,15 @@ object frmLogin: TfrmLogin
       Align = alTop
       Alignment = taCenter
       AutoSize = False
+      PasswordChar = '*'
       TabOrder = 1
       TextHint = 'Password'
-      ExplicitLeft = 20
-      ExplicitTop = 80
-      ExplicitWidth = 341
+      OnChange = ValidEntry
     end
     object bbnLogin: TBitBtn
       AlignWithMargins = True
       Left = 11
-      Top = 194
+      Top = 225
       Width = 353
       Height = 60
       Cursor = crNo
@@ -73,16 +73,14 @@ object frmLogin: TfrmLogin
       Margins.Bottom = 5
       Align = alBottom
       Caption = 'Login'
+      Enabled = False
       TabOrder = 2
       OnClick = bbnLoginClick
-      ExplicitLeft = 20
-      ExplicitTop = 180
-      ExplicitWidth = 341
     end
     object bbnCancel: TBitBtn
       AlignWithMargins = True
       Left = 11
-      Top = 264
+      Top = 295
       Width = 353
       Height = 60
       Cursor = crHandPoint
@@ -94,14 +92,32 @@ object frmLogin: TfrmLogin
       Kind = bkCancel
       NumGlyphs = 2
       TabOrder = 3
-      ExplicitTop = 262
+    end
+    object cbxVisible: TCheckBox
+      AlignWithMargins = True
+      Left = 11
+      Top = 156
+      Width = 353
+      Height = 21
+      Cursor = crHandPoint
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alTop
+      Alignment = taLeftJustify
+      Caption = 'Show Password'
+      DoubleBuffered = False
+      ParentDoubleBuffered = False
+      TabOrder = 4
+      OnClick = cbxVisibleClick
     end
   end
   object pnlInfo: TPanel
     Left = 0
     Top = 0
     Width = 375
-    Height = 202
+    Height = 171
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4

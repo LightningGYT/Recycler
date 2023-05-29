@@ -2,8 +2,8 @@ object frmStart: TfrmStart
   Left = 549
   Top = 213
   Caption = 'frmStart'
-  ClientHeight = 553
-  ClientWidth = 782
+  ClientHeight = 551
+  ClientWidth = 770
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -44,10 +44,6 @@ object frmStart: TfrmStart
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 20
-      ExplicitTop = 20
-      ExplicitWidth = 481
-      ExplicitHeight = 511
     end
   end
   object pnlWelcome: TPanel
@@ -97,9 +93,6 @@ object frmStart: TfrmStart
       Caption = 'Login'
       TabOrder = 0
       OnClick = bbnLoginClick
-      ExplicitLeft = 20
-      ExplicitTop = 150
-      ExplicitWidth = 211
     end
     object bbnClose: TBitBtn
       AlignWithMargins = True
@@ -116,9 +109,6 @@ object frmStart: TfrmStart
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 1
-      ExplicitLeft = 20
-      ExplicitTop = 219
-      ExplicitWidth = 211
     end
   end
 end

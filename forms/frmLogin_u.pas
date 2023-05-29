@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  clsLogerIner_u;
+  clsLogerIner_u, StrUtils;
 
 type
   TfrmLogin = class(TForm)
@@ -16,7 +16,10 @@ type
     edtPassword: TEdit;
     bbnLogin: TBitBtn;
     bbnCancel: TBitBtn;
+    cbxVisible: TCheckBox;
     procedure bbnLoginClick(Sender: TObject);
+    procedure ValidEntry(Sender: TObject);
+    procedure cbxVisibleClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,25 +58,60 @@ begin
     raise InputError;
   end;
 
-  // looks for extra spaces within the inputs and raises erro
-  for I := 1 to length(sUsername) do
+  // Checks for spaces in Inputs
+  if (ContainsText(sUsername, ' ')) OR (ContainsText(sPassword, ' ')) then
   begin
-    if ' ' = sUsername[I] then
-    begin
-      raise InputError;
-    end;
+    raise InputError;
   end;
 
-  for J := 1 to length(sPassword) do
-  begin
-    if ' ' = sPassword[J] then
-    begin
-      raise InputError;
-    end;
-  end;
+
 
   // Looks for info in database and checks password
   objLogerInner := TLoginer.Create(sUsername, sPassword);
+
+end;
+
+procedure TfrmLogin.cbxVisibleClick(Sender: TObject);
+var
+  bVis: boolean;
+begin
+
+  bVis := cbxVisible.Checked;
+
+  if bVis then
+  begin
+    edtPassword.PasswordChar := #0;
+  end
+  else
+  begin
+    edtPassword.PasswordChar := '*';
+  end;
+  
+end;
+
+procedure TfrmLogin.ValidEntry(Sender: TObject);
+var
+  sUsername, sPassword: String;
+begin
+
+  sUsername := Trim(edtUsername.Text);
+  sPassword := Trim(edtPassword.Text);
+
+  if (sUsername = '') OR (sPassword = '') then
+  begin
+    bbnLogin.Cursor := crNo;
+    bbnLogin.Enabled := False;
+  end
+  else if (ContainsText(sUsername, ' ')) OR (ContainsText(sPassword, ' ')) then
+  begin
+    bbnLogin.Cursor := crNo;
+    bbnLogin.Enabled := False;
+  end
+  else
+  begin
+    bbnLogin.Cursor := crHandPoint;
+    bbnLogin.Enabled := True;
+  end;
 
 end;
 
