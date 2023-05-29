@@ -1,0 +1,167 @@
+object frmAdmin: TfrmAdmin
+  Left = 549
+  Top = 196
+  Cursor = crNo
+  Caption = 'Admin'
+  ClientHeight = 554
+  ClientWidth = 788
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -15
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poDesigned
+  PixelsPerInch = 120
+  TextHeight = 20
+  object pnlInfo: TPanel
+    Left = -10
+    Top = 0
+    Width = 491
+    Height = 555
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    Enabled = False
+    TabOrder = 0
+    object lblInfo: TLabel
+      Left = 1
+      Top = 1
+      Width = 489
+      Height = 553
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      Align = alClient
+      Alignment = taCenter
+      ExplicitLeft = 230
+      ExplicitTop = 180
+      ExplicitWidth = 4
+      ExplicitHeight = 20
+    end
+  end
+  object pnlControll: TPanel
+    Left = 489
+    Top = 320
+    Width = 302
+    Height = 235
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    TabOrder = 1
+    object bbnLogOut: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 164
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 5
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alBottom
+      Caption = 'LogOut'
+      TabOrder = 0
+      ExplicitTop = 193
+    end
+    object bbnBack: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 94
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 5
+      Align = alBottom
+      Caption = 'Back'
+      TabOrder = 1
+      ExplicitLeft = 30
+      ExplicitTop = 50
+      ExplicitWidth = 94
+    end
+  end
+  object pnlEdit: TPanel
+    Left = 489
+    Top = 0
+    Width = 302
+    Height = 312
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    TabOrder = 2
+    object bbnSearch: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 11
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 5
+      Align = alTop
+      Caption = 'Search'
+      TabOrder = 0
+      ExplicitLeft = 5
+      ExplicitTop = 5
+      ExplicitWidth = 292
+    end
+    object bbnEditPersonal: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 81
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 5
+      Margins.Right = 10
+      Margins.Bottom = 5
+      Align = alTop
+      Caption = 'Edit Personal Information'
+      TabOrder = 1
+      ExplicitLeft = 5
+      ExplicitTop = 73
+      ExplicitWidth = 292
+    end
+    object bbnRecycle: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 151
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 5
+      Margins.Right = 10
+      Margins.Bottom = 5
+      Align = alTop
+      Caption = 'Edit Recycle'
+      TabOrder = 2
+      ExplicitLeft = 5
+      ExplicitTop = 112
+      ExplicitWidth = 292
+    end
+    object bbnAddNew: TBitBtn
+      AlignWithMargins = True
+      Left = 11
+      Top = 221
+      Width = 280
+      Height = 60
+      Margins.Left = 10
+      Margins.Top = 5
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alTop
+      Caption = 'Add New'
+      TabOrder = 3
+      ExplicitLeft = 5
+      ExplicitTop = 151
+      ExplicitWidth = 292
+    end
+  end
+end

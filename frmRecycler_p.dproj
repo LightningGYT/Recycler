@@ -125,6 +125,10 @@
             <Form>frmTeacher</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="forms\frmAdmin_u.pas">
+            <Form>frmAdmin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
