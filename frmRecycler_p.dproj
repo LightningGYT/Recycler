@@ -100,8 +100,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="forms\frmStart_u.pas">
-            <Form>frmStart</Form>
+        <DCCReference Include="forms\frmMain_u.pas">
+            <Form>frmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="forms\frmLogin_u.pas">
@@ -114,21 +114,28 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="forms\frmStudent_u.pas">
-            <Form>frmStudent</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="Classes\clsGeneral_u.pas"/>
         <DCCReference Include="Classes\clsLoger_u.pas"/>
-        <DCCReference Include="forms\frmTeacher_u.pas">
-            <Form>frmTeacher</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="forms\frmAdmin_u.pas">
             <Form>frmAdmin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Classes\clsLoginer_u.pas"/>
+        <DCCReference Include="frames\framStudent_u.pas">
+            <Form>framStudent</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="frames\framTeacher_u.pas">
+            <Form>framTeacher</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="frames\framStart_u.pas">
+            <Form>framStart</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

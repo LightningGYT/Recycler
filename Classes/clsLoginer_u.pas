@@ -3,7 +3,7 @@ unit clsLoginer_u;
 interface
 
 uses
-  SysUtils, dmRecycle_u, Hash, frmStudent_u;
+  SysUtils, dmRecycle_u, Hash;
 
 type
 

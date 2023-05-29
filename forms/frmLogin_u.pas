@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  StrUtils, clsLoginer_u, dmRecycle_u, frmStudent_u;
+  StrUtils, clsLoginer_u, dmRecycle_u;
 
 type
   TfrmLogin = class(TForm)
@@ -26,11 +26,15 @@ type
     { Public declarations }
   end;
 
+
 var
   frmLogin: TfrmLogin;
   objLoginer: TLoginer;
 
 implementation
+
+uses
+  frmMain_u;
 
 {$R *.dfm}
 
@@ -78,20 +82,7 @@ begin
     end;
   end;
 
-  // Find User type
-
-  case UserID.fType of
-    'S':
-      begin
-        frmStudent.SetDetails(UserID.fId);
-        frmStudent.Show;
-        Close;
-      end;
-    'T':
-      begin
-
-      end;
-  end;
+  frmMain.Login(UserID.fType, UserID.fId)
 
 end;
 

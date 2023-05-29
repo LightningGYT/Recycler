@@ -1,19 +1,15 @@
-object frmStart: TfrmStart
-  Left = 549
-  Top = 213
-  Caption = 'frmStart'
-  ClientHeight = 551
-  ClientWidth = 770
-  Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
-  Font.Height = -23
-  Font.Name = 'Segoe UI'
-  Font.Style = []
-  Position = poDesigned
-  OnCreate = FormCreate
+object framStart: TframStart
+  Left = 0
+  Top = 0
+  Width = 780
+  Height = 555
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
+  Align = alBottom
+  TabOrder = 0
   PixelsPerInch = 120
-  TextHeight = 31
   object pnlLeader: TPanel
     Left = 0
     Top = 0
@@ -59,8 +55,8 @@ object frmStart: TfrmStart
     object lblWelcome: TLabel
       Left = 80
       Top = 95
-      Width = 94
-      Height = 31
+      Width = 62
+      Height = 20
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4
@@ -92,7 +88,6 @@ object frmStart: TfrmStart
       Align = alBottom
       Caption = 'Login'
       TabOrder = 0
-      OnClick = bbnLoginClick
     end
     object bbnClose: TBitBtn
       AlignWithMargins = True

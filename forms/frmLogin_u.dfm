@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 726
   Top = 180
   Caption = 'Recycle'
-  ClientHeight = 554
-  ClientWidth = 378
+  ClientHeight = 553
+  ClientWidth = 372
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
