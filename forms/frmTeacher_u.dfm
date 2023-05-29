@@ -1,6 +1,6 @@
 object frmTeacher: TfrmTeacher
-  Left = 0
-  Top = 0
+  Left = 549
+  Top = 278
   Caption = 'Teacher'
   ClientHeight = 554
   ClientWidth = 788
@@ -10,6 +10,7 @@ object frmTeacher: TfrmTeacher
   Font.Height = -15
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesigned
   PixelsPerInch = 120
   TextHeight = 20
   object pnlLeader: TPanel
