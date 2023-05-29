@@ -44,6 +44,8 @@ begin
 end;
 
 procedure TfrmMain.Login(cType: Char; sId: String);
+var
+  sWelcome: String;
 begin
 
   case cType of
@@ -51,10 +53,12 @@ begin
       begin
         framStart.Visible := False;
         framStudent.Visible := True;
+
       end;
     'T':
       begin
-        framStart.Visible := false;
+        framStart.Visible := False;
+        framTeacher.Show;
       end;
   end;
 
