@@ -121,10 +121,11 @@ object frmTeacher: TfrmTeacher
     Align = alCustom
     TabOrder = 2
     object lblWelcome: TLabel
-      Left = 1
-      Top = 1
-      Width = 264
-      Height = 281
+      AlignWithMargins = True
+      Left = 5
+      Top = 5
+      Width = 256
+      Height = 273
       Margins.Left = 4
       Margins.Top = 4
       Margins.Right = 4

@@ -2,8 +2,8 @@ object frmStart: TfrmStart
   Left = 549
   Top = 213
   Caption = 'frmStart'
-  ClientHeight = 554
-  ClientWidth = 788
+  ClientHeight = 553
+  ClientWidth = 782
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,21 +18,24 @@ object frmStart: TfrmStart
     Left = 0
     Top = 0
     Width = 521
-    Height = 551
+    Height = 555
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
     TabOrder = 0
     object redLeader: TRichEdit
-      Left = 20
-      Top = 20
-      Width = 481
-      Height = 511
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      AlignWithMargins = True
+      Left = 11
+      Top = 11
+      Width = 499
+      Height = 533
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alClient
+      Alignment = taCenter
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -15
@@ -41,12 +44,16 @@ object frmStart: TfrmStart
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
+      ExplicitLeft = 20
+      ExplicitTop = 20
+      ExplicitWidth = 481
+      ExplicitHeight = 511
     end
   end
   object pnlWelcome: TPanel
     Left = 529
     Top = 0
-    Width = 250
+    Width = 254
     Height = 221
     Margins.Left = 4
     Margins.Top = 4
@@ -68,40 +75,50 @@ object frmStart: TfrmStart
   object pnlControl: TPanel
     Left = 529
     Top = 229
-    Width = 250
-    Height = 322
+    Width = 254
+    Height = 325
     Margins.Left = 4
     Margins.Top = 4
     Margins.Right = 4
     Margins.Bottom = 4
     TabOrder = 2
     object bbnLogin: TBitBtn
-      Left = 20
-      Top = 150
-      Width = 211
+      AlignWithMargins = True
+      Left = 11
+      Top = 183
+      Width = 232
       Height = 61
       Cursor = crHandPoint
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Margins.Left = 10
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 5
+      Align = alBottom
       Caption = 'Login'
       TabOrder = 0
       OnClick = bbnLoginClick
+      ExplicitLeft = 20
+      ExplicitTop = 150
+      ExplicitWidth = 211
     end
     object bbnClose: TBitBtn
-      Left = 20
-      Top = 219
-      Width = 211
-      Height = 62
+      AlignWithMargins = True
+      Left = 11
+      Top = 254
+      Width = 232
+      Height = 60
       Cursor = crHandPoint
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Margins.Left = 10
+      Margins.Top = 5
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alBottom
       Kind = bkClose
       NumGlyphs = 2
       TabOrder = 1
+      ExplicitLeft = 20
+      ExplicitTop = 219
+      ExplicitWidth = 211
     end
   end
 end

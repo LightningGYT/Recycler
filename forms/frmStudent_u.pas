@@ -14,7 +14,7 @@ type
     pnlControl: TPanel;
     redLeader: TRichEdit;
     bbnLogout: TBitBtn;
-    bbnClose: TBitBtn;
+    lblInfo: TLabel;
   private
     { Private declarations }
   public
