@@ -58,6 +58,7 @@ object frmAdmin: TfrmAdmin
       Top = 164
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 10
@@ -73,6 +74,7 @@ object frmAdmin: TfrmAdmin
       Top = 94
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 10
       Margins.Right = 10
@@ -101,6 +103,7 @@ object frmAdmin: TfrmAdmin
       Top = 11
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 10
       Margins.Right = 10
@@ -118,6 +121,7 @@ object frmAdmin: TfrmAdmin
       Top = 81
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 10
@@ -135,6 +139,7 @@ object frmAdmin: TfrmAdmin
       Top = 151
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 10
@@ -152,6 +157,7 @@ object frmAdmin: TfrmAdmin
       Top = 221
       Width = 280
       Height = 60
+      Cursor = crHandPoint
       Margins.Left = 10
       Margins.Top = 5
       Margins.Right = 10

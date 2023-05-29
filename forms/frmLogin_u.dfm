@@ -66,7 +66,7 @@ object frmLogin: TfrmLogin
       Top = 194
       Width = 353
       Height = 60
-      Cursor = crHandPoint
+      Cursor = crNo
       Margins.Left = 10
       Margins.Top = 10
       Margins.Right = 10
