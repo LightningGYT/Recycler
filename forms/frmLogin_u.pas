@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  clsLogerIner_u, StrUtils;
+  StrUtils, clsLoginer_u, dmRecycle_u, frmStudent_u;
 
 type
   TfrmLogin = class(TForm)
@@ -21,14 +21,14 @@ type
     procedure ValidEntry(Sender: TObject);
     procedure cbxVisibleClick(Sender: TObject);
   private
-    { Private declarations }
+
   public
     { Public declarations }
   end;
 
 var
   frmLogin: TfrmLogin;
-  objLogerInner: TLoginer;
+  objLoginer: TLoginer;
 
 implementation
 
@@ -40,6 +40,7 @@ var
   I: Integer;
   InputError: Exception;
   J: Integer;
+  UserID: TLogin;
 begin
 
   InputError := Exception.Create('Input Error');
@@ -64,10 +65,33 @@ begin
     raise InputError;
   end;
 
+  // Login
+  objLoginer := TLoginer.Create(sUsername, sPassword);
 
+  try
+    UserID := objLoginer.Login();
+  except
+    on eNoUser do
+    begin
+      ShowMessage('Log in error');
+      exit;
+    end;
+  end;
 
-  // Looks for info in database and checks password
-  objLogerInner := TLoginer.Create(sUsername, sPassword);
+  // Find User type
+
+  case UserID.fType of
+    'S':
+      begin
+        frmStudent.SetDetails(UserID.fId);
+        frmStudent.Show;
+        Close;
+      end;
+    'T':
+      begin
+
+      end;
+  end;
 
 end;
 
@@ -86,7 +110,7 @@ begin
   begin
     edtPassword.PasswordChar := '*';
   end;
-  
+
 end;
 
 procedure TfrmLogin.ValidEntry(Sender: TObject);

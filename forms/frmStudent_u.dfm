@@ -44,10 +44,7 @@ object frmStudent: TfrmStudent
       ParentFont = False
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 20
-      ExplicitTop = 20
-      ExplicitWidth = 441
-      ExplicitHeight = 511
+      ExplicitHeight = 531
     end
   end
   object pnlInfo: TPanel
@@ -72,8 +69,6 @@ object frmStudent: TfrmStudent
       Margins.Bottom = 4
       Align = alClient
       Alignment = taCenter
-      ExplicitLeft = 100
-      ExplicitTop = 110
       ExplicitWidth = 4
       ExplicitHeight = 20
     end
@@ -102,9 +97,6 @@ object frmStudent: TfrmStudent
       Align = alBottom
       Caption = 'Logout'
       TabOrder = 0
-      ExplicitLeft = 30
-      ExplicitTop = 130
-      ExplicitWidth = 134
     end
   end
 end

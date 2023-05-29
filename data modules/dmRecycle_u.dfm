@@ -15,6 +15,7 @@ object dmRecycle: TdmRecycle
   object qryRecycle: TADOQuery
     Connection = conRecycle
     Parameters = <>
+    Prepared = True
     Left = 296
     Top = 104
   end
