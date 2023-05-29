@@ -11,7 +11,8 @@ uses
   frmStudent_u in 'forms\frmStudent_u.pas' {frmStudent},
   clsLogerIner_u in 'Classes\clsLogerIner_u.pas',
   clsGeneral_u in 'Classes\clsGeneral_u.pas',
-  clsLoger_u in 'Classes\clsLoger_u.pas';
+  clsLoger_u in 'Classes\clsLoger_u.pas',
+  frmTeacher_u in 'forms\frmTeacher_u.pas' {frmTeacher};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TdmRecycle, dmRecycle);
   Application.CreateForm(TfrmStudent, frmStudent);
+  Application.CreateForm(TfrmTeacher, frmTeacher);
   Application.Run;
 end.

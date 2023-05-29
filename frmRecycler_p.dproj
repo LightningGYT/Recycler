@@ -121,6 +121,10 @@
         <DCCReference Include="Classes\clsLogerIner_u.pas"/>
         <DCCReference Include="Classes\clsGeneral_u.pas"/>
         <DCCReference Include="Classes\clsLoger_u.pas"/>
+        <DCCReference Include="forms\frmTeacher_u.pas">
+            <Form>frmTeacher</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
