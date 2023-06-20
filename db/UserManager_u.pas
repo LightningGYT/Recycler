@@ -25,7 +25,7 @@ type
     constructor Create();
 
     function Find(iID: Integer): Integer;
-    function Login(sUsername, sPassword: String): Integer;
+    function Login(sUsername: String): Integer;
   end;
 
 implementation
@@ -54,8 +54,8 @@ begin
 
     Active := True;
     ExecSQL;
-
-    if not RecordCount < 1 then
+    var rec := RecordCount;
+    if  RecordCount >= 1 then
     begin
       Result := 1;
     end
@@ -71,7 +71,7 @@ begin
       Active := True;
       ExecSQL;
 
-      if not RecordCount < 1 then
+      if RecordCount >= 1 then
       begin
         Result := 2;
       end
@@ -85,9 +85,7 @@ begin
   end;
 end;
 
-function TUserManager.Login(sUsername, sPassword: String): Integer;
-var
-  sSalt: String;
+function TUserManager.Login(sUsername: String): Integer;
 begin
 
   with dmRecycler.qryRecycle do

@@ -22,10 +22,6 @@ type
     pnlWelcome: TPanel;
     pnlControls: TPanel;
     cbxPassVis: TCheckBox;
-    PrototypeBindSource1: TPrototypeBindSource;
-    BindingsList1: TBindingsList;
-    LinkControlToField1: TLinkControlToField;
-    LinkControlToField2: TLinkControlToField;
     procedure cbxPassVisClick(Sender: TObject);
   private
     { Private declarations }

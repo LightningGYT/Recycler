@@ -145,40 +145,4 @@ object framWelcome: TframWelcome
       end
     end
   end
-  object PrototypeBindSource1: TPrototypeBindSource
-    AutoActivate = True
-    AutoPost = False
-    FieldDefs = <
-      item
-        Name = 'Username'
-        ReadOnly = False
-      end
-      item
-        Name = 'Password'
-        ReadOnly = False
-      end>
-    ScopeMappings = <>
-    Left = 312
-    Top = 224
-  end
-  object BindingsList1: TBindingsList
-    Methods = <>
-    OutputConverters = <>
-    Left = 20
-    Top = 5
-    object LinkControlToField1: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = PrototypeBindSource1
-      FieldName = 'Username'
-      Control = edtUsername
-      Track = True
-    end
-    object LinkControlToField2: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = PrototypeBindSource1
-      FieldName = 'Password'
-      Control = edtPassword
-      Track = True
-    end
-  end
 end

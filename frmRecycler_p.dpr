@@ -5,7 +5,8 @@ uses
   frmRecycler_u in 'Units\frmRecycler_u.pas' {frmRecycler},
   framWelcome_u in 'frames\framWelcome_u.pas' {framWelcome: TFrame},
   dmRecycler_u in 'db\dmRecycler_u.pas' {dmRecycler: TDataModule},
-  UserManager_u in 'db\UserManager_u.pas';
+  UserManager_u in 'db\UserManager_u.pas',
+  framTeacher_u in 'frames\framTeacher_u.pas' {framTeacher: TFrame};
 
 {$R *.res}
 
