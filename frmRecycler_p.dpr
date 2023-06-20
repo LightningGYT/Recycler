@@ -2,29 +2,18 @@ program frmRecycler_p;
 
 uses
   Vcl.Forms,
-  frmStart_u in 'forms\frmStart_u.pas' {frmStart},
-  frmLogin_u in 'forms\frmLogin_u.pas' {frmLogin},
-  Vcl.Themes,
-  Vcl.Styles,
-  clsChecker_u in 'Classes\clsChecker_u.pas',
-  dmRecycle_u in 'data modules\dmRecycle_u.pas' {dmRecycle: TDataModule},
-  frmStudent_u in 'forms\frmStudent_u.pas' {frmStudent},
-  clsGeneral_u in 'Classes\clsGeneral_u.pas',
-  clsLoger_u in 'Classes\clsLoger_u.pas',
-  frmTeacher_u in 'forms\frmTeacher_u.pas' {frmTeacher},
-  frmAdmin_u in 'forms\frmAdmin_u.pas' {frmAdmin},
-  clsLoginer_u in 'Classes\clsLoginer_u.pas';
+  frmRecycler_u in 'Units\frmRecycler_u.pas' {frmRecycler},
+  framWelcome_u in 'frames\framWelcome_u.pas' {framWelcome: TFrame},
+  dmRecycler_u in 'db\dmRecycler_u.pas' {dmRecycler: TDataModule},
+  UserManager_u in 'db\UserManager_u.pas',
+  framTeacher_u in 'frames\framTeacher_u.pas' {framTeacher: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmStart, frmStart);
-  Application.CreateForm(TfrmLogin, frmLogin);
-  Application.CreateForm(TdmRecycle, dmRecycle);
-  Application.CreateForm(TfrmStudent, frmStudent);
-  Application.CreateForm(TfrmTeacher, frmTeacher);
-  Application.CreateForm(TfrmAdmin, frmAdmin);
+  Application.CreateForm(TfrmRecycler, frmRecycler);
+  Application.CreateForm(TdmRecycler, dmRecycler);
   Application.Run;
 end.

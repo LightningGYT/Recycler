@@ -1,4 +1,4 @@
-unit dmRecycle_u;
+unit dmRecycler_u;
 
 interface
 
@@ -6,10 +6,9 @@ uses
   System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
 
 type
-  TdmRecycle = class(TDataModule)
+  TdmRecycler = class(TDataModule)
     conRecycle: TADOConnection;
     qryRecycle: TADOQuery;
-    dsRecycle: TDataSource;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -18,14 +17,14 @@ type
   end;
 
 var
-  dmRecycle: TdmRecycle;
+  dmRecycler: TdmRecycler;
 
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 {$R *.dfm}
 
-procedure TdmRecycle.DataModuleCreate(Sender: TObject);
+procedure TdmRecycler.DataModuleCreate(Sender: TObject);
 begin
   conRecycle.Connected := True;
 end;

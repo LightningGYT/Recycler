@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{FC6E0C67-677C-4327-B60E-23FF1EBE32ED}</ProjectGuid>
+        <ProjectGuid>{2F470775-5D62-469B-8609-DCAE9938723A}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
@@ -60,7 +60,7 @@
         <SanitizedProjectName>frmRecycler_p</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;Skia.Package.VCL;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FireDACCommon;FmxTeeUI;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;Python;TeeUI;P4DPyPackage;DBXMySQLDriver;Tee;VclSmp;inet;P4DEnvironmentProject;vclimg;PythonVcl;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;P4DEnvironment;dbrtl;bindcompvcl;dsnap;fmxdae;Skia.Package.FMX;TeeDB;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;PythonFmx;FMXTee;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;Skia.Package.VCL;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FireDACCommon;FmxTeeUI;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;BetterComponants;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;Python;TeeUI;P4DPyPackage;DBXMySQLDriver;Tee;VclSmp;inet;P4DEnvironmentProject;vclimg;PythonVcl;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;P4DEnvironment;dbrtl;bindcompvcl;dsnap;fmxdae;Skia.Package.FMX;TeeDB;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;PythonFmx;FMXTee;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -84,8 +84,6 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -100,35 +98,26 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="forms\frmStart_u.pas">
-            <Form>frmStart</Form>
+        <DCCReference Include="Units\frmRecycler_u.pas">
+            <Form>frmRecycler</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="forms\frmLogin_u.pas">
-            <Form>frmLogin</Form>
+        <DCCReference Include="frames\framWelcome_u.pas">
+            <Form>framWelcome</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="Classes\clsChecker_u.pas"/>
-        <DCCReference Include="data modules\dmRecycle_u.pas">
-            <Form>dmRecycle</Form>
+        <DCCReference Include="db\dmRecycler_u.pas">
+            <Form>dmRecycler</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="forms\frmStudent_u.pas">
-            <Form>frmStudent</Form>
+        <DCCReference Include="db\UserManager_u.pas"/>
+        <DCCReference Include="frames\framTeacher_u.pas">
+            <Form>framTeacher</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="Classes\clsGeneral_u.pas"/>
-        <DCCReference Include="Classes\clsLoger_u.pas"/>
-        <DCCReference Include="forms\frmTeacher_u.pas">
-            <Form>frmTeacher</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="forms\frmAdmin_u.pas">
-            <Form>frmAdmin</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="Classes\clsLoginer_u.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -149,10 +138,6 @@
                 <Source>
                     <Source Name="MainSource">frmRecycler_p.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
                 <DeployFile LocalName="Win32\Debug\frmRecycler_p.exe" Configuration="Debug" Class="ProjectOutput">
