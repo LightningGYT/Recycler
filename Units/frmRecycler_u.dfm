@@ -4,8 +4,8 @@ object frmRecycler: TfrmRecycler
   AutoSize = True
   BorderStyle = bsSingle
   Caption = 'Recycler'
-  ClientHeight = 480
-  ClientWidth = 646
+  ClientHeight = 481
+  ClientWidth = 650
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,15 +22,5 @@ object frmRecycler: TfrmRecycler
     Height = 480
     AutoSize = True
     TabOrder = 0
-    inherited pnlControls: TPanel
-      inherited pnlWelcome: TPanel
-        ExplicitWidth = 205
-      end
-      inherited pnlLogin: TPanel
-        inherited bbnLogin: TBitBtn
-          OnClick = framWelcome1bbnLoginClick
-        end
-      end
-    end
   end
 end
