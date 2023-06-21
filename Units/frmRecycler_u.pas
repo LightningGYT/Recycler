@@ -10,8 +10,8 @@ uses
 
 type
   TfrmRecycler = class(TForm)
-    framWelcome: TframWelcome;
     framTeacher: TframTeacher;
+    framWelcome: TframWelcome;
     procedure FormCreate(Sender: TObject);
     procedure framWelcomebbnLoginClick(Sender: TObject);
     procedure framTeacherbbnLogOutClick(Sender: TObject);

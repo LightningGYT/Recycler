@@ -1,25 +1,37 @@
 object framWelcome: TframWelcome
   Left = 0
   Top = 0
-  Width = 646
-  Height = 480
-  AutoSize = True
+  Width = 800
+  Height = 600
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
   TabOrder = 0
+  PixelsPerInch = 120
   object pnlLeader: TPanel
     AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 417
-    Height = 474
+    Left = 4
+    Top = 4
+    Width = 521
+    Height = 592
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alLeft
     BorderStyle = bsSingle
     TabOrder = 0
     object redLeader: TRichEdit
       AlignWithMargins = True
-      Left = 4
-      Top = 4
-      Width = 405
-      Height = 462
+      Left = 5
+      Top = 5
+      Width = 507
+      Height = 578
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alClient
       Alignment = taCenter
       Enabled = False
@@ -34,10 +46,14 @@ object framWelcome: TframWelcome
   end
   object pnlControls: TPanel
     AlignWithMargins = True
-    Left = 426
-    Top = 3
-    Width = 217
-    Height = 474
+    Left = 533
+    Top = 4
+    Width = 271
+    Height = 592
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Align = alLeft
     Anchors = [akLeft, akTop, akRight, akBottom]
     AutoSize = True
@@ -45,34 +61,42 @@ object framWelcome: TframWelcome
     TabOrder = 1
     object pnlWelcome: TPanel
       AlignWithMargins = True
-      Left = 4
-      Top = 4
-      Width = 205
-      Height = 205
+      Left = 5
+      Top = 5
+      Width = 257
+      Height = 256
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alTop
       Caption = 'Welcome'
-      Padding.Top = 10
-      Padding.Bottom = 10
+      Padding.Top = 13
+      Padding.Bottom = 13
       TabOrder = 0
     end
     object pnlLogin: TPanel
       AlignWithMargins = True
-      Left = 4
-      Top = 215
-      Width = 205
-      Height = 251
+      Left = 5
+      Top = 269
+      Width = 257
+      Height = 314
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       Align = alClient
       TabOrder = 1
       object edtUsername: TEdit
         AlignWithMargins = True
-        Left = 11
-        Top = 11
-        Width = 183
-        Height = 23
-        Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Left = 14
+        Top = 14
+        Width = 229
+        Height = 28
+        Margins.Left = 13
+        Margins.Top = 13
+        Margins.Right = 13
+        Margins.Bottom = 13
         Align = alTop
         Alignment = taCenter
         MaxLength = 255
@@ -81,14 +105,14 @@ object framWelcome: TframWelcome
       end
       object edtPassword: TEdit
         AlignWithMargins = True
-        Left = 11
-        Top = 54
-        Width = 183
-        Height = 23
-        Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Left = 14
+        Top = 68
+        Width = 229
+        Height = 28
+        Margins.Left = 13
+        Margins.Top = 13
+        Margins.Right = 13
+        Margins.Bottom = 13
         Align = alTop
         Alignment = taCenter
         MaxLength = 255
@@ -98,30 +122,30 @@ object framWelcome: TframWelcome
       end
       object bbnLogin: TBitBtn
         AlignWithMargins = True
-        Left = 11
-        Top = 154
-        Width = 183
-        Height = 33
+        Left = 14
+        Top = 192
+        Width = 229
+        Height = 41
         Cursor = crHandPoint
-        Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Margins.Left = 13
+        Margins.Top = 13
+        Margins.Right = 13
+        Margins.Bottom = 13
         Align = alBottom
         Caption = '&Login'
         TabOrder = 2
       end
       object bbnClose: TBitBtn
         AlignWithMargins = True
-        Left = 11
-        Top = 207
-        Width = 183
-        Height = 33
+        Left = 14
+        Top = 259
+        Width = 229
+        Height = 41
         Cursor = crHandPoint
-        Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Margins.Left = 13
+        Margins.Top = 13
+        Margins.Right = 13
+        Margins.Bottom = 13
         Align = alBottom
         Kind = bkClose
         NumGlyphs = 2
@@ -129,14 +153,14 @@ object framWelcome: TframWelcome
       end
       object cbxPassVis: TCheckBox
         AlignWithMargins = True
-        Left = 11
-        Top = 97
-        Width = 183
-        Height = 17
-        Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Left = 14
+        Top = 122
+        Width = 229
+        Height = 22
+        Margins.Left = 13
+        Margins.Top = 13
+        Margins.Right = 13
+        Margins.Bottom = 13
         Align = alTop
         Alignment = taLeftJustify
         Caption = 'ShowPassword'
