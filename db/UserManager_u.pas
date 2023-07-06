@@ -6,26 +6,34 @@ uses dmRecycler_u, Vcl.Dialogs, System.SysUtils;
 
 type
   TStudent = record
-    id: Integer;
+    id: String;
     firstName: String;
     Surname: String;
-    Login_Id: Integer;
+    Login_Id: String;
   end;
 
-  TTEacher = record
-    id: Integer;
+  TClass = record
+    id:String;
+    Students : array of TStudent
+  end;
+
+  Tcls = (Cls, NoValue=0);
+
+  TTeacher = record
+    id: String;
     firstName: String;
     Surname: String;
-    Login_Id: Integer;
+    Login_Id: String;
     Admin: boolean;
+    cls:Tcls;
   end;
 
   TUserManager = class
   public
     constructor Create();
-
-    function Find(iID: Integer): Integer;
-    function Login(sUsername: String): Integer;
+    function LoadTeacher(sID:String): TTeacher;
+    function Find(sID: String): Integer;
+    function Login(sUsername: String; sPassword:string): String;
   end;
 
 implementation
@@ -37,7 +45,7 @@ begin
   //
 end;
 
-function TUserManager.Find(iID: Integer): Integer;
+function TUserManager.Find(sID: String): Integer;
 var
   Student: TStudent;
   Teacher: TTEacher;
@@ -50,7 +58,7 @@ begin
 
     SQL.Text := 'SELECT * FROM Student ' + 'WHERE Login_ID =:Input';
 
-    Parameters.ParamByName('Input').Value := iID;
+    Parameters.ParamByName('Input').Value := sID;
 
     Active := True;
     ExecSQL;
@@ -66,7 +74,7 @@ begin
 
       SQL.Text := 'SELECT * FROM Teacher ' + 'WHERE Login_ID =:Input';
 
-      Parameters.ParamByName('Input').Value := iID;
+      Parameters.ParamByName('Input').Value := sID;
 
       Active := True;
       ExecSQL;
@@ -85,7 +93,46 @@ begin
   end;
 end;
 
-function TUserManager.Login(sUsername: String): Integer;
+function TUserManager.LoadTeacher(sID: String): TTeacher;
+var
+TOut:TTeacher;
+SOut:TStudent;
+COut:TClass;
+begin
+
+  with dmRecycler.qryRecycle do
+  begin
+    Active := False;
+    SQL.Clear;
+
+    SQL.Text := 'SELECT * FROM Teacher WHERE Login_ID =:LoginID';
+    Parameters.ParamByName('LoginID').Value := sID;
+
+    Active := True;
+    ExecSQL;
+
+    TOut.id := FieldByName('ID').AsString;
+    TOut.firstName := FieldByName('Teacher_Name').AsString;
+    TOut.Surname := FieldByName('Teacher_Surname').AsString;
+    TOut.Login_Id := sID;
+    TOut.Admin := FieldByName('Admin').AsBoolean;
+
+    Active := False;
+    SQL.Clear;
+
+    SQL.Text := 'SELECT * FROM Class WHERE Teacher_ID =:TeacherID';
+    Parameters.ParamByName('TeacherID').Value := TOut.id;
+
+    Active := True;
+    ExecSQL;
+
+    ShowMessage(FieldByName('ID').AsString);
+
+  end;
+
+end;
+
+function TUserManager.Login(sUsername: String; sPassword:string): String;
 begin
 
   with dmRecycler.qryRecycle do
@@ -101,11 +148,18 @@ begin
 
     if RecordCount < 1 then
     begin
-      Result := 0;
+      Result := '';
       Exit;
     end;
 
-    Result := Find(FieldByName('Id').AsInteger);
+    if not (FieldByName('Password').AsString = sPassword) then
+    begin
+      Result := '';
+      Exit;
+    end;
+
+
+    Result := FieldByName('Id').AsString
 
   end;
 end;

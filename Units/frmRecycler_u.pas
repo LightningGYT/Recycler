@@ -16,6 +16,8 @@ type
     procedure framWelcomebbnLoginClick(Sender: TObject);
     procedure framTeacherbbnLogOutClick(Sender: TObject);
   private
+    procedure LoadStudent(sID:String);
+    procedure LoadTeacher(sID:String);
   public
     { Public declarations }
   end;
@@ -51,21 +53,35 @@ begin
   end;
 
   var
-  iUserType := objUserManager.Login(sUsername);
+  UserID := objUserManager.Login(sUsername, sPassword);
 
-  case iUserType of
-    0:
-      ShowMessage('Not Found');
-    1:
-    begin
-      ShowMessage('Student');
-    end;
-    2:
-    begin
-      ShowMessage('Teacher')
-    end;
+  if UserID = '' then
+  begin
+    ShowMessage('Account not Found');
+    exit;
   end;
 
+  var
+    iUserType := objUserManager.Find(UserID);
+
+  case iUserType of
+      1:LoadStudent(UserID);
+      2:LoadTeacher(UserID);
+  end;
+
+
+end;
+
+procedure TfrmRecycler.LoadStudent(sID: String);
+begin
+
+end;
+
+procedure TfrmRecycler.LoadTeacher(sID: String);
+begin
+framWelcome.Hide;
+//objUserManager.LoadTeacher(sID) ;
+framTeacher.Show;
 end;
 
 end.
